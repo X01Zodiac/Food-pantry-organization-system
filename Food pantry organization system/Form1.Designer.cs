@@ -31,10 +31,11 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxInventory = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxItem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonSubmit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,16 +78,16 @@
             this.comboBox1.Text = "Category";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // listBox1
+            // listBoxInventory
             // 
-            this.listBox1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(12, 86);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(247, 444);
-            this.listBox1.TabIndex = 5;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBoxInventory.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.listBoxInventory.FormattingEnabled = true;
+            this.listBoxInventory.ItemHeight = 20;
+            this.listBoxInventory.Location = new System.Drawing.Point(12, 86);
+            this.listBoxInventory.Name = "listBoxInventory";
+            this.listBoxInventory.Size = new System.Drawing.Size(247, 444);
+            this.listBoxInventory.TabIndex = 5;
+            this.listBoxInventory.SelectedIndexChanged += new System.EventHandler(this.listBoxInventory_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -97,14 +98,14 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Current Inventroy";
             // 
-            // textBox1
+            // textBoxItem
             // 
-            this.textBox1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.textBox1.Location = new System.Drawing.Point(326, 234);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "Food";
+            this.textBoxItem.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.textBoxItem.Location = new System.Drawing.Point(326, 234);
+            this.textBoxItem.Name = "textBoxItem";
+            this.textBoxItem.Size = new System.Drawing.Size(125, 27);
+            this.textBoxItem.TabIndex = 7;
+            this.textBoxItem.Text = "Food";
             // 
             // label3
             // 
@@ -116,21 +117,35 @@
             this.label3.Text = "Select the category in the drop down and then enter what type of food it is in th" +
     "e text box ";
             // 
+            // buttonSubmit
+            // 
+            this.buttonSubmit.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.buttonSubmit.ForeColor = System.Drawing.Color.Black;
+            this.buttonSubmit.Location = new System.Drawing.Point(326, 327);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(125, 29);
+            this.buttonSubmit.TabIndex = 9;
+            this.buttonSubmit.Text = "Submit Item";
+            this.buttonSubmit.UseVisualStyleBackColor = false;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(897, 546);
+            this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxItem);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxInventory);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,9 +156,10 @@
         private NumericUpDown numericUpDown1;
         private Label label1;
         private ComboBox comboBox1;
-        private ListBox listBox1;
+        private ListBox listBoxInventory;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox textBoxItem;
         private Label label3;
+        private Button buttonSubmit;
     }
 }
