@@ -80,30 +80,8 @@ namespace Food_pantry_organization_system
             {
                 con.Open();
                 cmd = new MySqlCommand(InsertString, con);               
-                cmd.Parameters.Add("@item", MySqlDbType.VarChar).Value = textBoxItem.Text;                
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("Data Inserted SuccessFully");
-                }
-                else
-                {
-                    MessageBox.Show("Data Failed To Insert SuccessFully");
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show("Error" + err);
-            }
-            finally
-            {
-                cmd.Dispose();
-                con.Close();
-            }
-
-            try
-            {
-                con.Open();              
-                cmd = new MySqlCommand(InsertInt, con);               
+                cmd.Parameters.Add("@item", MySqlDbType.VarChar).Value = textBoxItem.Text;
+                cmd = new MySqlCommand(InsertInt, con);
                 cmd.Parameters.Add("@quantity", MySqlDbType.Int64).Value = numericUpDown1.Value;
                 if (cmd.ExecuteNonQuery() == 1)
                 {
